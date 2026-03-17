@@ -1,0 +1,106 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator{
+    width:900px;
+}
+
+.display{
+    border: 1px solid #ddd;
+    background:white;
+    border-radius:30px;
+    padding:20px;
+    margin-bottom:20px;
+}
+
+.result{
+    text-align:right;
+    font-size:40px;
+}
+
+.buttons{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:10px;
+}
+
+button{
+    border:none;
+    border-radius:30px;
+    padding:18px;
+    font-size:18px;
+    color:white;
+    cursor:pointer;
+}
+
+.sci{
+    background: #dfe5f1;
+    color: #2c2c2c;
+}
+
+.number{
+    background: #e8eaed;
+    color: #2c2c2c;
+}
+
+.operator{
+    background:#dfe5f1;
+    color: #2c2c2c;
+}
+
+.equal{
+    background:#1a73e8;
+    color:white;
+}
+
+.deg-rad{
+    grid-column:span 2;
+    background: #dfe5f1;
+    border-radius:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+}
+
+.deg-rad button{
+    background:none;
+    border:none;
+    color:#2c2c2c;
+    font-size:18px;
+}
+
+.deg-rad span{
+    color: #8a8a8a;;
+}
+
+
+@media screen and (max-width:768px){
+    .buttons{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+    /* scientific pindah ke bawah */
+    .sci,
+    .deg-rad{
+        order:2;
+    }
+
+    /* angka dan operator ke atas */
+    .number,
+    .operator,
+    .equal{
+        order:1;
+    }
+}

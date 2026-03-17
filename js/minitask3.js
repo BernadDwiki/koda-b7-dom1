@@ -31,7 +31,7 @@ div2.appendChild(labelUmur)
 
 const inputUmur = document.createElement("input");
 inputUmur.setAttribute("type","text")
-inputUmur.setAttribute("id","nama")
+inputUmur.setAttribute("id","umur")
 div2.appendChild(inputUmur)
 
 form.appendChild(div2)
