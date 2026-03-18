@@ -40,7 +40,7 @@ rad.innerText = "Rad";
 div1.append(deg, span, rad);
 buttons.appendChild(div1);
 
-for(let i = 0; i < 33; i++){
+for(let i = 0; i < arrayIsi.length; i++){
     const button = document.createElement("button")
     button.innerText= arrayIsi[i];
     button.className = classes[i];
